@@ -1,10 +1,9 @@
-a,b=map(int, input().split())
-if a>=90:
-    if b>=95:
-        print(100000)
-    elif b>=90:
-        print(50000)
-    else:
-        print(0)
-else:
-    print(0)
+a, b = map(int, input().split())
+reward = 0
+
+if a >= 90:
+    reward = 50000 if b >= 90 else 0
+    if b >= 95:
+        reward = 100000
+
+print(reward)
