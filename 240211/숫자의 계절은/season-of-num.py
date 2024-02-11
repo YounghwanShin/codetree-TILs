@@ -1,9 +1,7 @@
 a = int(input())
-if a>=3 and a<=5:
-    print("Spring")
-elif a>=6 and a<=8:
-    print("Summer")
-elif a>=9 and a<=11:
-    print("Fall")
-else:
-    print("Winter")
+seasons = {range(3, 6): "Spring", range(6, 9): "Summer", range(9, 12): "Fall", range(1, 3): "Winter", range(12, 13): "Winter"}
+
+for key in seasons:
+    if a in key:
+        print(seasons[key])
+        break
