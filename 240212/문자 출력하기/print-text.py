@@ -1,5 +1,5 @@
 a=input()
 i=0
 while i<8:
-    print(a)
+    print(a, end=" ")
     i+=1
