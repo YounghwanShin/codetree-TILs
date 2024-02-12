@@ -1,13 +1,15 @@
-from decimal import Decimal, getcontext
+def long_division(numerator, denominator, decimal_places):
+    quotient = numerator // denominator
+    remainder = numerator % denominator
+    result = str(quotient) + "."
 
-# 소수점 이하 21자리까지 정확도를 보장하도록 설정
-getcontext().prec = 21
+    for _ in range(decimal_places):
+        remainder *= 10
+        quotient = remainder // denominator
+        remainder %= denominator
+        result += str(quotient)
 
-# 입력 받기
-a, b = map(Decimal, input().split())
+    return result
 
-# 나눗셈 수행
-result = a / b
-
-# 결과 출력 (소수점 이하 20자리까지)
-print("{:.20f}".format(result))
+a, b = map(int, input().split())
+print(long_division(a, b, 20))
