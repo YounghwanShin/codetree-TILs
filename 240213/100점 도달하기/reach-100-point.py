@@ -1,19 +1,16 @@
 n = int(input())
 
-def printf(par):
-    print(par, end=" ")
-
-def grade(score):
-    if score>=90:
-        printf('A')
-    elif score>=80:
-        printf('B')
-    elif score>=70:
-        printf('c')
-    elif score>=60:
-        printf('D')
+def print_grade(score):
+    if score >= 90:
+        print('A', end=" ")
+    elif score >= 80:
+        print('B', end=" ")
+    elif score >= 70:
+        print('C', end=" ")
+    elif score >= 60:
+        print('D', end=" ")
     else:
-        printf('F')
+        print('F', end=" ")
 
-for i in range(n,101):
-    grade(i)
+for i in range(n, 101):
+    print_grade(i)
