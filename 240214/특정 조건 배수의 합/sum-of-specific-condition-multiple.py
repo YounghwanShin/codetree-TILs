@@ -7,9 +7,9 @@ def calculate(a,b):
             val_sum+=i
     return val_sum
 
-if a>b:
+if a<b:
     print(calculate(a,b))
-elif a<b:
+elif a>b:
     print(calculate(b,a))
 else:
     if a%5==0:
