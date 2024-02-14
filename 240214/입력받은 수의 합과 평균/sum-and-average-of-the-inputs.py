@@ -7,4 +7,4 @@ for _ in range(n):
 
 sum_val=sum(arr)
 ave_val=sum_val/len(arr)
-print(sum_val,"f{ave_val:.1f}")
+print(sum_val,f"{ave_val:.1f}")
