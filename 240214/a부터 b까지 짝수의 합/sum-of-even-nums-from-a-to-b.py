@@ -13,4 +13,4 @@ elif a>b:
     print(calculate(b,a))
 else:
     if a%2==0:
-    print(a)
+       print(a)
