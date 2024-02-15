@@ -8,4 +8,4 @@ for i in range(1,n+1):
     else:
         k+=1
 
-pritnt(k)
+print(k)
