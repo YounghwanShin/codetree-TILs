@@ -4,9 +4,7 @@ sum=0
 
 for i in range(1,101):
     sum+=i
-    if sum==n:
+    if sum>=n:
         break
-    elif sum>n:
-        sum-=i
-        break
-print(sum)
+
+print(i)
