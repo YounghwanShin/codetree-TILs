@@ -12,7 +12,7 @@ for i in range(start, end+1):
                 divisor_num += 1
             else:
                 divisor_num += 2
-    if divisor_num>=3:
+    if divisor_num==3:
         n+=1
 
 print(n)
