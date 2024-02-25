@@ -1,10 +1,9 @@
-arr=list(map(int,input().split()))
-arr_2=[]
+arr = list(map(int, input().split()))
 
-for i in arr:
-    if i==0:
-        break
-    arr_2.append(i)
+try:
+    zero_index = arr.index(0)
+except ValueError:
+    zero_index = len(arr)
 
-for k in arr_2[::-1]:
-    print(k, end=' ')
+for num in arr[zero_index-1::-1]:
+    print(num, end=' ')
