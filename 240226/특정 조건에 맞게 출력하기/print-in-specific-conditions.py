@@ -1,12 +1,6 @@
 arr = list(map(int, input().split()))
 
-i=0
-
-while i<=len(arr)-1:
-    if arr[i]==0:
+for num in arr:
+    if num == 0:
         break
-    if arr[i]%2==0:
-        print(arr[i]//2, end=' ')
-    else:
-        print(arr[i]+3, end=" ")
-    i+=1
+    print(num // 2 if num % 2 == 0 else num + 3, end=' ')
