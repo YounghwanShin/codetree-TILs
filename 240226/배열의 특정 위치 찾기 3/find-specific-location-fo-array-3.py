@@ -1,10 +1,10 @@
-arr = list(map(int, input().split()))
+arr=list(map(int, input().split()))
 
-cnt = 0
+zero_index = [i for i, k in enumerate(arr) if k == 0]
 
-for i, num in enumerate(arr):
-    if num == 0:
-        break
-    cnt += num
+cnt=0
+
+for i in range(zero_index[0]-3:zero_index[0]):
+    cnt+=arr[i]
 
 print(cnt)
