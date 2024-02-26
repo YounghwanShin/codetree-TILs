@@ -1,12 +1,14 @@
-n=int(input())
+n = int(input())
 
-arr=[n]
-val=0
+arr = [n]
+val = 0
+i = 0
 
-for i,num in enumerate(arr):
-    arr.append(arr[i]+n)
-    print(num, end=' ')
-    if arr[i]%5==0:
-        val+=1
-        if val==2:
-            break
+while True:
+    print(arr[i], end=' ')
+    if arr[i] % 5 == 0:
+        val += 1
+    if val == 2:
+        break
+    arr.append(arr[i] + n)
+    i += 1
