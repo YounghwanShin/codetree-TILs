@@ -17,4 +17,5 @@ for _ in range(q):
         a,b=arr_question[1],arr_question[2]
         for i in range(a-1,b):
             print(arr[i],end=' ')
+        print()
     arr_question=[]
