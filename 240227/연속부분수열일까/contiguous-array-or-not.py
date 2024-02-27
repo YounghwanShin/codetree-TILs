@@ -10,7 +10,9 @@ for start in start_indices:
         print('Yes')
         break
     else:
-        print('No')
+        if start==start_indices[-1]:
+            print('No')
+        continue
 
 if len(start_indices)==0:
     print('No')
