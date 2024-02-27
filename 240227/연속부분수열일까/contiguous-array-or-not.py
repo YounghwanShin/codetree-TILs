@@ -3,11 +3,20 @@ N_1,N_2 = map(int, input().split())
 arr_A = list(map(int, input().split()))
 arr_B = list(map(int, input().split()))
 
+arr_index=[arr_A.index(i) for i in arr_A if i==arr_B[0]]
+k=True
+
 try:
-    index_arr_B_1 = arr_A.index(arr_B[0])
-    if arr_A[index_arr_B_1:index_arr_B_1+len(arr_B)] == arr_B:
-        print('Yes')
-    else:
-        print('No')
+    for j in arr_index:
+        if arr_A[j:j+len(arr_B)] == arr_B:
+            k=True
+            break
+        else:
+            k=False
 except ValueError:
+    print('No')
+
+if k==True:
+    print('Yes')
+else:
     print('No')
