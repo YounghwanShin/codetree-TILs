@@ -6,7 +6,7 @@ arr_B = list(map(int, input().split()))
 start_indices = [i for i, x in enumerate(arr_A) if x == arr_B[0]]
 
 for start in start_indices:
-    elif arr_A[start:start+len(arr_B)] == arr_B:
+    if arr_A[start:start+len(arr_B)] == arr_B:
         print('Yes')
         break
     else:
