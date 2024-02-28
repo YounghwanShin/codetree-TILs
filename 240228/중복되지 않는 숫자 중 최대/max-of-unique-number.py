@@ -15,9 +15,11 @@ else:
     if arr[0]!=arr[1]:
         print(arr[0])
     else:
-        for k in range(1,n):
+        for k in range(1,n-1):
             if arr[k]!=arr[k+1] and arr[k-1]!=arr[k]:
                 print(arr[k])
                 break
         else:
+            if arr[-2]!=arr[-1]:
+                print(arr[-1])
             print(-1)
