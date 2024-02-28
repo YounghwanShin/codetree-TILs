@@ -1,25 +1,18 @@
-n=int(input())
+def find_largest_unique_number(n, arr):
+    arr.sort(reverse=True)
 
-arr=list(map(int, input().split()))
+    if arr[0] != arr[1]:
+        return arr[0]
 
-if n==1:
-    print(arr[0])
-else:
-    for i in range(n):
-        max_index=i
-        for j in range(i+1,n):
-            if arr[max_index]<arr[j]:
-                max_index=j
-        arr[i],arr[max_index]=arr[max_index],arr[i]
+    for i in range(1, n-1):
+        if arr[i] != arr[i+1] and arr[i-1] != arr[i]:
+            return arr[i]
 
-    if arr[0]!=arr[1]:
-        print(arr[0])
-    else:
-        for k in range(1,n-1):
-            if arr[k]!=arr[k+1] and arr[k-1]!=arr[k]:
-                print(arr[k])
-                break
-        else:
-            if arr[-2]!=arr[-1]:
-                print(arr[-1])
-            print(-1)
+    if arr[-2] != arr[-1]:
+        return arr[-1]
+        
+    return -1
+
+n = int(input())
+arr = list(map(int, input().split()))
+print(find_largest_unique_number(n, arr))
