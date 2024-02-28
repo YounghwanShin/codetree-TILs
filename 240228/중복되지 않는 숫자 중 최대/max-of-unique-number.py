@@ -1,6 +1,9 @@
 def find_largest_unique_number(n, arr):
     arr.sort(reverse=True)
 
+    if n==1:
+        return arr[0]
+
     if arr[0] != arr[1]:
         return arr[0]
 
@@ -10,7 +13,7 @@ def find_largest_unique_number(n, arr):
 
     if arr[-2] != arr[-1]:
         return arr[-1]
-        
+
     return -1
 
 n = int(input())
