@@ -11,13 +11,12 @@ for j in range(m):
         cnt+=1
         i,j=i+1,j-1
 else:
-    if m>1:
-        for i in range(1,n):
-            j=m-1
-            while i<n and j>=0:
-                arr[i][j]=cnt
-                cnt+=1
-                i,j=i+1,j-1
+    for i in range(1,n):
+        j=m-1
+        while i<n and j>=0:
+            arr[i][j]=cnt
+            cnt+=1
+            i,j=i+1,j-1
 
 for i in range(n):
     for j in range(m):
