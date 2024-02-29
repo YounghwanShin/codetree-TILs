@@ -10,7 +10,7 @@ if n==1:
         cnt+=1
 elif m==1:
     for i in range(n):
-        arr[i][n]=cnt
+        arr[i][0]=cnt
         cnt+=1
 else:
     for j in range(m):
