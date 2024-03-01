@@ -1,12 +1,10 @@
-arr_2d=[input() for _ in range(10)]
-a=input()
+arr_2d = [input() for _ in range(10)]
+a = input()
 
-cnt=False
+matched = [arr for arr in arr_2d if arr[-1] == a]
 
-for arr in arr_2d:
-    if arr[-1]==a:
+if matched:
+    for arr in matched:
         print(arr)
-        cnt=True
-
-if cnt==False:
+else:
     print('None')
