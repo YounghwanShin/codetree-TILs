@@ -8,5 +8,5 @@ for arr in arr_2d:
         print(arr)
         cnt=True
 
-if cnt=False:
+if cnt==False:
     print('None')
