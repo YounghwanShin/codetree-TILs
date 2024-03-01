@@ -1,25 +1,9 @@
-A=input()
+from itertools import groupby
 
-arr=[]
-cnt=1
+A = input()
+arr = [(k, len(list(g))) for k, g in groupby(A)]
 
-for i in range(len(A)):
-    if i+1==len(A):
-        if A[i]==A[i-1]:
-            arr.append((A[i],cnt))
-        else:
-            arr.append((A[i],1))
-    else:
-        if A[i]==A[i+1]:
-            cnt+=1
-        else:
-            arr.append((A[i],cnt))
-            cnt=1
-
-words=''
-
-for k,num in arr:
-    words=words+k+str(num)
+words = ''.join([k + str(num) for k, num in arr])
 
 print(len(words))
 print(words)
