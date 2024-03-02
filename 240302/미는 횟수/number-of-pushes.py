@@ -1,16 +1,10 @@
-A=input()
-B=input()
-
-def transfer(arr):
-    return arr[-1]+arr[:-1]
+A = input()
+B = input()
 
 for i in range(len(A)):
-    if A==B:
+    if A == B:
         print(i)
         break
-    A=transfer(A)
+    A = A[-1] + A[:-1]
 else:
-    if A==B:
-        print(i)
-    else:
-        print(-1)
+    print(-1)
