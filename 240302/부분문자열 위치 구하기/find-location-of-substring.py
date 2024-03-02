@@ -1,11 +1,9 @@
-A=input()
-a=input()
+A = input()
+a = input()
 
-for i in range(len(a),len(A)):
-    val=True
-    for k in range(len(a),0,-1):
-        if A[i-k]!=a[len(a)-k]:
-            val=False
-    if val==True:
-        print(i-len(a))
+for i in range(len(A) - len(a) + 1):
+    if A[i:i+len(a)] == a:
+        print(i)
         break
+else:
+    print(-1)
