@@ -1,10 +1,12 @@
-arr = []
-A = input()
+A=input()
+cnt=1
+arr=[]
 
-while A != '0':
-    if len(arr) % 2 == 0:
+while A!='0':
+    if cnt%2!=0:
         arr.append(A)
-    A = input()
+    cnt+=1
+    A=input()
 
-print(len(arr) * 2 - 1)
-print(*arr, sep='\n')
+print(cnt-1)
+print(*arr,sep='\n')
