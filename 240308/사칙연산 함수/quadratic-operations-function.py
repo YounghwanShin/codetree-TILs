@@ -20,6 +20,6 @@ elif o=='-':
 elif o=='*':
     print(f'{a} {o} {c} = {dot(a,c)}')
 elif o=='/':
-    print(f'{a} {o} {c} = {dot(a,c)}')
+    print(f'{a} {o} {c} = {na(a,c)}')
 else:
     print('False')
