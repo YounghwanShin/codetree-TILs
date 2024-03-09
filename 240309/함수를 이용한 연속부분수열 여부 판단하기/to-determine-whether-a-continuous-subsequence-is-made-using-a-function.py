@@ -3,12 +3,10 @@ A = input().split()
 B = input().split()
 
 def arr(a, b, A, B):
+    b_str = ' '.join(B)
     for i in range(a - b + 1):
-        cnt = 0
-        for k in range(b):
-            if A[i + k] == B[k]:
-                cnt += 1
-        if cnt == b:
+        a_sub_str = ' '.join(A[i:i+b])
+        if a_sub_str == b_str:
             return True
     return False
 
