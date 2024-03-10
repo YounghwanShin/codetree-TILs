@@ -1,11 +1,8 @@
-def plaindrome(A):
-    n=len(A)
-    if A[:n//2]==A[n:n//2:-1]:
-        return True
-    return False
+def palindrome(A):
+    return A == A[::-1]
 
-A=input()
-if plaindrome(A):
+A = input()
+if palindrome(A):
     print('Yes')
 else:
     print('No')
