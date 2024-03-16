@@ -1,12 +1,10 @@
-def f(n,cnt):
+def f(n):
     if n==1:
-        return cnt
+        return 0
     elif n%2==0:
-        cnt+=1
-        return f(n/2,cnt)
+        return f(n/2)+1
     else:
-        cnt+=1
-        return f(n//3,cnt)
+        return f(n//3)+1
 
 N=int(input())
-print(f(N,cnt=0))
+print(f(N))
