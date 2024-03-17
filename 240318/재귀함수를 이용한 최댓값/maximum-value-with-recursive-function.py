@@ -3,7 +3,7 @@ def f(n,arr):
         return arr[n]
     
     if arr[n]<f(n-1,arr):
-        return f(n-1,arr)
+        return arr[n-1]
     else:
         return arr[n]
     
