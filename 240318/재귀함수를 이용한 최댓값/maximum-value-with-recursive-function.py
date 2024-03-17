@@ -2,7 +2,11 @@ def f(n,arr):
     if n == 0:
         return arr[0]
     else:
-        return max(arr[n], f(n-1, arr))
+        prev_max = f(n-1, arr)
+        if arr[n] > prev_max:
+            return arr[n] 
+        else:
+            return prev_max
     
 n=int(input())
 arr=list(map(int,input().split()))
