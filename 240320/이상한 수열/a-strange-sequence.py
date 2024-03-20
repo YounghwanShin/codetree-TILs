@@ -6,7 +6,7 @@ def T(n):
     elif n==2:
         return 2
     
-    return T(int(n/3))+T(n-1)
+    return T(int(n/3))+T(n-1)   #//으로도 바닥함수 구현 가능.
 
 n=int(input())
 print(T(n))
