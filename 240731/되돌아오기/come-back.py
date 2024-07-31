@@ -15,7 +15,7 @@ for _ in range(N):
         time += 1
         if x==0 and y==0:
             print(time)
-
+            val = True
             break
 
 if val==False:
