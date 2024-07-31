@@ -14,9 +14,11 @@ for _ in range(N):
         x, y = x + dxs[dir_num], y + dys[dir_num]
         time += 1
         if x==0 and y==0:
-            print(time)
             val = True
             break
+    if val == True:
+        print(time)
+        break
 
 if val==False:
     print(-1)
