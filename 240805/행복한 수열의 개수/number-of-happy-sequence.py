@@ -14,13 +14,16 @@ def is_happy_sequence(sequence):
 
 happy_count = 0
 
-for row in arr:
-    if is_happy_sequence(row):
-        happy_count += 1
+if m==1:
+    happy_count = n*n
+else:
+    for row in arr:
+        if is_happy_sequence(row):
+            happy_count += 1
 
-for col in range(n):
-    column = [arr[row][col] for row in range(n)]
-    if is_happy_sequence(column):
-        happy_count += 1
+    for col in range(n):
+        column = [arr[row][col] for row in range(n)]
+        if is_happy_sequence(column):
+            happy_count += 1
 
 print(happy_count)
