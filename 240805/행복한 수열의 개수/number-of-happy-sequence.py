@@ -15,7 +15,7 @@ def is_happy_sequence(sequence):
 happy_count = 0
 
 if m==1:
-    happy_count = n*n
+    happy_count = 2*n
 else:
     for row in arr:
         if is_happy_sequence(row):
